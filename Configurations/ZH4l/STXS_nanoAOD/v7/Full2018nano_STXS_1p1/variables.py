@@ -15,15 +15,17 @@ configurations = os.path.dirname(configurations) # STXS_nanoAOD
 configurations = os.path.dirname(configurations) # ZH4l
 
 variables['class0_XSF'] = {
-     'name': 'hww_ZH_BDT(Entry$,0)',
+#     'name': 'hww_ZH_BDT(Entry$,0)',
+    'name' : 'BDT_test',
      'range' : ([-0.50,-0.25,-0.15,0.,0.15,0.25,0.35,0.50,0.80],),
      'xaxis' : 'MVA discriminant ZH',
-     'fold' : 3,
-     'linesToAdd' : ['.L %s/nano_config/v7/Full2018/hww_ZH_BDT.C+' % configurations]
+     'fold' : 3
+#     'linesToAdd' : ['.L %s/nano_config/v7/Full2018/hww_ZH_BDT.C+' % configurations]
 }
 
 variables['class1_XDF'] = {
-     'name': 'hww_ZH_BDT(Entry$,0)',
+#     'name': 'hww_ZH_BDT(Entry$,0)',
+    'name' : 'BDT_test',
      'range' : ([-0.50,-0.25,0.,0.25,0.50,0.80],),
      'xaxis' : 'MVA discriminant ZH',
      'fold' : 3,

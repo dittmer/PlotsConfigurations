@@ -3,9 +3,10 @@ import os
 import copy
 
 configurations = os.path.realpath(inspect.getfile(inspect.currentframe())) # this file
-configurations = os.path.dirname(configurations) # Full2016_nanoAODv4_CR
-configurations = os.path.dirname(configurations) # ggH
-configurations = os.path.dirname(configurations) # Configurations
+configurations = os.path.dirname(configurations) # Full2018nano_STXS_1p1
+configurations = os.path.dirname(configurations) # v7
+configurations = os.path.dirname(configurations) # STXS_nanoAOD
+configurations = os.path.dirname(configurations) # ZH4l
 
 #aliases = {}
 
@@ -261,3 +262,30 @@ aliases['lhe_mW2'] = {
 }
 '''
 
+aliases['z0Mass_zh4l_test'] = {
+    'linesToAdd': [
+        '.L %s/src/PlotsConfigurations/Configurations/ZH4l/STXS_nanoAOD/v7/l4kin_patch.cc+' % os.getenv('CMSSW_BASE')
+    ],
+    'class': 'l4kin_patch',
+    'args': ("z0Mass_zh4l")
+}
+
+aliases['z1Mass_zh4l_test'] = {
+    'class': 'l4kin_patch',
+    'args': ("z1Mass_zh4l")
+}
+
+aliases['z0Pt_zh4l_test'] = {
+    'class': 'l4kin_patch',
+    'args': ("z0Pt_zh4l")
+}
+
+aliases['mllll_zh4l_test'] = {
+    'class': 'l4kin_patch',
+    'args': ("mllll_zh4l")
+}
+
+aliases['BDT_test'] = {
+    'class' : 'l4kin_patch',
+    'args' : ("BDT")
+}

@@ -1,0 +1,4 @@
+mkPlot.py --inputFile=rootFiles_ZH3l_2018_v6_freeze/plots_ZH3l_2018_v6_freeze.root --showIntegralLegend=1 --outputDirPlots=plot_ZH3l_2018_v6_freeze_unblind --onlyPlot=cratio --onlyCut=zh3l_WZ_CR_1j --plotFile=plot_WZ1j.py
+mkPlot.py --inputFile=rootFiles_ZH3l_2018_v6_freeze/plots_ZH3l_2018_v6_freeze.root --showIntegralLegend=1 --outputDirPlots=plot_ZH3l_2018_v6_freeze_unblind --onlyPlot=cratio --onlyCut=zh3l_WZ_CR_2j --plotFile=plot_WZ2j.py
+#mkPlot.py --inputFile=rootFiles_ZH3l_2018_v6_freeze/plots_ZH3l_2018_v6_freeze.root --showIntegralLegend=1 --outputDirPlots=plot_ZH3l_2018_v6_freeze_unblind --onlyPlot=cratio --onlyCut=zh3l_SR_1j --plotFile=plot_1j.py
+#mkPlot.py --inputFile=rootFiles_ZH3l_2018_v6_freeze/plots_ZH3l_2018_v6_freeze.root --showIntegralLegend=1 --outputDirPlots=plot_ZH3l_2018_v6_freeze_unblind --onlyPlot=cratio --onlyCut=zh3l_SR_2j --plotFile=plot_2j.py

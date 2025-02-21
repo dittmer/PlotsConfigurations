@@ -1,230 +1,32 @@
 # structure configuration for datacard
-
-#structure = {}
-
 # keys here must match keys in samples.py    
-#                    
-structure['DY']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0
-              }
+structure ={}
 
+# keys here must match keys in samples.py 
+for iproc in samples.keys():
+    structure[iproc] = {
+        'isSignal' : 1 if any(substring in iproc for substring in ['H_hww','H_htt']) else 0,
+        'isData'   : 1 if iproc == 'DATA' else 0,
+    }
 
-#structure['Wjets']  = {  
-#                  'isSignal' : 0,
-#                  'isData'   : 0 
-#              }
-#
-#structure['Fake']  = {  
-#                  'isSignal' : 0,
-#                  'isData'   : 0 
-#              }
-
-structure['Fake_ee']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-              }
-
-structure['Fake_mm']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-              }
-
-structure['Fake_em']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-              }
-
-structure['ttV']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-              }
-
-#structure['Fake_em']  = {  
-#                  'isSignal' : 0,
-#                  'isData'   : 0,
-#                  'removeFromCuts' : [
-#                                      'hww2l2v_13TeV_me_pm_0j_pt2ge20',
-#                                      'hww2l2v_13TeV_me_pm_0j_pt2ge20', 
-#                                      'hww2l2v_13TeV_me_pm_1j_pt2ge20', 
-#                                      'hww2l2v_13TeV_me_mp_0j_pt2ge20',
-#                                      'hww2l2v_13TeV_me_mp_1j_pt2ge20',
-#                                      'hww2l2v_13TeV_me_pm_0j_pt2lt20',
-#                                      'hww2l2v_13TeV_me_pm_1j_pt2lt20',
-#                                      'hww2l2v_13TeV_me_mp_0j_pt2lt20',
-#                                      'hww2l2v_13TeV_me_mp_1j_pt2lt20'],
-#              }
-#
-#structure['Fake_me']  = {  
-#                  'isSignal' : 0,
-#                  'isData'   : 0,
-#                  'removeFromCuts' : [
-#                                      'hww2l2v_13TeV_em_pm_0j_pt2ge20',
-#                                      'hww2l2v_13TeV_em_pm_0j_pt2ge20', 
-#                                      'hww2l2v_13TeV_em_pm_1j_pt2ge20', 
-#                                      'hww2l2v_13TeV_em_mp_0j_pt2ge20',
-#                                      'hww2l2v_13TeV_em_mp_1j_pt2ge20',
-#                                      'hww2l2v_13TeV_em_pm_0j_pt2lt20',
-#                                      'hww2l2v_13TeV_em_pm_1j_pt2lt20',
-#                                      'hww2l2v_13TeV_em_mp_0j_pt2lt20',
-#                                      'hww2l2v_13TeV_em_mp_1j_pt2lt20'],
-#              }
-
-#structure['ttbar'] = {   
-#                  'isSignal' : 0,
-#                  'isData'   : 0 
-#                  }
-#
-#
-#structure['singletop'] = {   
-#                  'isSignal' : 0,
-#                  'isData'   : 0 
-#                  }
-
-structure['top'] = {   
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-
-structure['WW']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0    
-                  }
-
-structure['WWewk']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-                  }
-
-structure['ggWW']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0    
-                  }
-
-#structure['ggWW_Int']  = {
-#                  'isSignal' : 0,
-#                  'isData'   : 0    
-#                  }
-#
-structure['Wg']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-structure['Zg']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-structure['ZgS']  = {
-                  'isSignal' : 0,
-                  'isData'   : 0,
-                  'removeFromCuts' : [
-                                      'hww2l2v_13TeV_of2j_WH_SS_uu_2j'],
-                  }
-
-structure['WgS'] = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-                  }
-
-structure['WZ'] = {
-                  'isSignal' : 0,
-                  'isData'   : 0
-                  }
-
-structure['ZZ']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-structure['WZhad']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-
-structure['VVV']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 0 
-                  }
-
-structure['ggH_hww'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['qqH_hww'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-#structure['WH_hww'] = {
-#                  'isSignal' : 1,
-#                  'isData'   : 0    
-#                  }
-
-structure['ZH_hww'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['ttH_hww'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0
-                  }
-
-structure['ggZH_hww'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0    
-                  }
-
-structure['ggH_htt'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['qqH_htt'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['WH_htt'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['ZH_htt'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['WH_hww_PTV_LT150'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['WH_hww_PTV_GT150'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-structure['WH_hww_FWDH'] = {
-                  'isSignal' : 1,
-                  'isData'   : 0,
-                  }
-
-
-
-# data
-
-
-structure['DATA']  = { 
-                  'isSignal' : 0,
-                  'isData'   : 1 
-              }
-
-
+structure['Wg']['removeFromCuts']      = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150','hww2l2v_13TeV_of2j_WH_SS_eu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_gt150']
+structure['ggWW']['removeFromCuts']    = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_gt150']
+structure['ZgS']['removeFromCuts']     = ['hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_gt150']
+structure['WWewk']['removeFromCuts']   = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_lt150']
+structure['Fake_mm']['removeFromCuts'] = ['hww2l2v_13TeV_of2j_WH_SS_eu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_eu_1j_ptv_lt150']
+structure['top']['removeFromCuts']     = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150']
+structure['Zg']['removeFromCuts']      = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150']
+structure['Fake_em']['removeFromCuts'] = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150']
+structure['WW']['removeFromCuts']      = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150']
+structure['DY']['removeFromCuts']      = ['hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_uu_2j_ptv_lt150',
+                                          'hww2l2v_13TeV_of2j_WH_SS_uu_1j_ptv_lt150','hww2l2v_13TeV_of2j_WH_SS_eu_1j_ptv_gt150','hww2l2v_13TeV_of2j_WH_SS_eu_2j_ptv_gt150']
 
 

@@ -221,7 +221,6 @@ samples['Higgs'] = {
     'FilesPerJob': 20
 }
 
-
 ###########################################
 #############   SIGNALS  ##################
 ###########################################
@@ -279,7 +278,7 @@ samples['Fake'] = {
   'weight': 'METFilter_DATA*fakeW',
   'weights': [],
   'isData': ['all'],
-  'FilesPerJob': 100,
+  'FilesPerJob': 500,
   'suppressNegativeNuisances' : ['all'],
 }
 
@@ -303,7 +302,7 @@ samples['DATA'] = {
   'weight': 'METFilter_DATA*LepWPCut',
   'weights': [],
   'isData': ['all'],
-  'FilesPerJob': 100
+  'FilesPerJob': 500
 }
 
 for _, sd in DataRun:
